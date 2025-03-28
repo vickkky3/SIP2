@@ -12,7 +12,7 @@
 # use sqlite 3
 ##DATABASE_SERVER_URL=sqlite:///db.sqlite3
 # use postgres
-DATABASE_SERVER_URL='postgres://alumnodb:alumnodb@192.168.1.58:15432/voto'
+DATABASE_SERVER_URL='postgres://alumnodb:alumnodb@172.20.10.2:15432/voto'
 #DATABASE_SERVER_URL='postgresql://alumnodb:npg_luUM7s6YbnpH@ep-wild-mountain-a8j6dy6y-pooler.eastus2.azure.neon.tech/voto?sslmode=require'
 # The client does not need to store data in any database
 # so let us define a sqlite in orden to avoid warning messages
