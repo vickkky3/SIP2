@@ -36,11 +36,11 @@ class Voto(models.Model):
     """Definición del modelo para registrar un voto"""
     # use min_lentgh=1 to avoid empty strings
     # since "" is a valid string in Python
-    idCircunscripcion = models.CharField(max_length=16)
-    idMesaElectoral = models.CharField(max_length=16)
-    idProcesoElectoral = models.CharField(max_length=16)
+    idCircunscripcion = models.CharField(max_length=32)
+    idMesaElectoral = models.CharField(max_length=32)
+    idProcesoElectoral = models.CharField(max_length=32)
     nombreCandidatoVotado = models.CharField(
-        max_length=16, blank=False, null=False,
+        max_length=32, blank=False, null=False,
         validators=[MinLengthValidator(1)])
     censo = models.ForeignKey(Censo, on_delete=models.CASCADE)
     marcaTiempo = models.DateTimeField(auto_now=True)

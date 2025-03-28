@@ -14,7 +14,7 @@ def cancelar_voto(hostname, port, id_voto):
 
     channel.queue_declare(queue='voto_cancelacion', durable=True)
 
-    mensaje = f"Cancelar voto {id_voto}"
+    mensaje = f"{id_voto}"
     channel.basic_publish(
         exchange='',
         routing_key='voto_cancelacion',
@@ -22,7 +22,7 @@ def cancelar_voto(hostname, port, id_voto):
         properties=pika.BasicProperties(delivery_mode=2)  # Mensaje persistente
     )
 
-    print(f" [x] Sent '{mensaje}'")
+    print(f" [x] Sent cancelar voto'{mensaje}'")
     connection.close()
 
 def main():

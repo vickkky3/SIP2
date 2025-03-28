@@ -85,7 +85,7 @@ def testbd(request):
         data['censo_id'] = censo_form.cleaned_data['numeroDNI']
 
         # save voto
-
+        
         voto = registrar_voto(data)
 
         if voto is None:
